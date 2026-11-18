@@ -584,7 +584,7 @@ li {
    Interactive SSO Verification Tool
    ========================================================================== */
 .tool-section {
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
   background-color: var(--bg-surface);
   border-bottom: 1px solid var(--border-color);
 }
@@ -792,7 +792,7 @@ li {
    Featured Blog Posts / Articles Section
    ========================================================================== */
 .articles-section {
-  padding: 1.5rem 0;
+  padding: 3.5rem 0;
   background-color: var(--bg-surface);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
@@ -929,7 +929,7 @@ li {
    Comprehensive SEO Guide (In-Depth Content Section)
    ========================================================================== */
 .guide-content-section {
-  padding: 3.5rem 0;
+  padding: 1.5rem 0;
 }
 
 .content-layout {
@@ -1403,24 +1403,6 @@ tr:hover td {
     display: none;
   }
 }
-/* stop the page from being wider than the screen */
-html, body { max-width: 100%; overflow-x: clip; }
-
-/* format checker form */
-.tool-input { min-width: 0; width: 100%; }
-
-@media (max-width: 600px) {
-  .tool-input-group { flex-direction: column; }
-  .tool-input-group .btn { width: 100%; justify-content: center; }
-}
-
-/* header fits small phones */
-@media (max-width: 480px) {
-  .header-actions .btn { display: none; } /* login is in the bottom bar */
-  .brand-title { font-size: 1.05rem; }
-  .brand-tagline { font-size: 0.68rem; }
-  .brand-link { min-width: 0; }
-}
 .guide-article { padding: 2.5rem; }
 
 @media (max-width: 768px) {
@@ -1440,4 +1422,22 @@ html, body { max-width: 100%; overflow-x: clip; }
   .main-nav { top: 64px; }
   .ticker-badge { display: none; }
   table { font-size: 0.82rem; }
+}
+/* stop the page from being wider than the screen */
+html, body { max-width: 100%; overflow-x: clip; }
+
+/* format checker form */
+.tool-input { min-width: 0; width: 100%; }
+
+@media (max-width: 600px) {
+  .tool-input-group { flex-direction: column; }
+  .tool-input-group .btn { width: 100%; justify-content: center; }
+}
+
+/* header fits small phones */
+@media (max-width: 480px) {
+  .header-actions .btn { display: none; } /* login is in the bottom bar */
+  .brand-title { font-size: 1.05rem; }
+  .brand-tagline { font-size: 0.68rem; }
+  .brand-link { min-width: 0; }
 }

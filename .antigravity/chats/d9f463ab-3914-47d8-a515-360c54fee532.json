@@ -40,6 +40,18 @@
       "created_at": "2026-11-18T05:17:44.367Z",
       "sender": "ios",
       "is_cancelled": false
+    },
+    {
+      "id": "648650f0-69f1-4fbd-bef9-28f8da512ea7",
+      "role": "agent",
+      "content": "आपकी **Rajasthan SSO Guide (RajasthanSSO.guide)** वेबसाइट को राजस्थान में **#1 रैंक** प्राप्त करने तथा Google AdSense व सर्च कंसोल के 100% मानकों को पूरा करने के लिए निम्नलिखित आवश्यक पेजों और उच्च-सर्च-वॉल्यूम गाइडों के साथ अपडेट कर दिया गया है:\n\n---\n\n### 🚀 किए गए प्रमुख कार्य एवं नए पेजेस:\n\n1. **E-E-A-T और कानूनी विश्वास पृष्ठ (Trust & Indexing Pages):**\n   - [contact.html](https://github.com/vikash-siyag/make-a-blogger-website-for-sso/blob/main/contact.html) — आधिकारिक DoIT&C संपर्क, सीएम हेल्पलाइन 181, जिला सूची एवं इंटरएक्टिव फीडबैक फॉर्म।\n   - [privacy-policy.html](https://github.com/vikash-siyag/make-a-blogger-website-for-sso/blob/main/privacy-policy.html) — Google AdSense, DART कुकीज एवं भारतीय डिजिटल डेटा संरक्षण मानकों के अनुरूप।\n   - [disclaimer.html](https://github.com/vikash-siyag/make-a-blogger-website-for-sso/blob/main/disclaimer.html) — गैर-सरकारी शैक्षिक पोर्टल का स्पष्ट कानूनी अस्वीकरण (सरकारी प्रतिरूपण पेनाल्टी से सुरक्षा)।\n   - [sitemap.xml](https://github.com/vikash-siyag/make-a-blogger-website-for-sso/blob/main/sitemap.xml) — Googlebot क्रॉलिंग के लिए सभी 12 पेजों का प्राथमिकता-आधारित साइटमैप।\n   - [robots.txt](https://github.com/vikash-siyag/make-a-blogger-website-for-sso/blob/main/robots.txt) — सर्च इंजन क्रॉलर निर्देश।\n\n2. **राजस्थान के लिए 2 नए उच्च-सर्च-वॉल्यूम ब्लॉग गाइड्स:**\n   - [blog/sso-id-merge-deactivate-delete.html](https://github.com/vikash-siyag/make-a-blogger-website-for-sso/blob/main/blog/sso-id-merge-deactivate-delete.html) — **\"दो SSO ID को मर्ज व डीएक्टिवेट कैसे करें?\"** (अभ्यर्थियों की सबसे बड़ी समस्या: *Jan Aadhaar already mapped error* का समाधान)।\n   - [blog/emitra-sso-login-services.html](https://github.com/vikash-siyag/make-a-blogger-website-for-sso/blob/main/blog/emitra-sso-login-services.html) — **\"E-Mitra SSO Login 2026 व रेट लिस्ट\"** (जाति, मूल निवास, बिल भुगतान एवं कियोस्क रजिस्ट्रेशन गाइड)।\n\n3. **होमपेज एवं इंटरनल लिंकिंग अपडेट:**\n   - [index.html](https://github.com/vikash-siyag/make-a-blogger-website-for-sso/blob/main/index.html) में नए दोनों लेखों के कार्ड, साइडबार त्वरित लिंक और फुटर लिंक्स जोड़ दिए गए हैं।\n   - सभी आंतरिक लिंक्स का स्वचालित सत्यापन किया गया है (0 टूटे हुए लिंक्स / No Broken Links)।\n\n---\n\n### 🌐 लाइव वेबसाइट प्रीव्यू:\nआप अपनी वेबसाइट को लाइव देखने के लिए नीचे दिए गए लिंक पर क्लिक कर सकते हैं:\n👉 **[https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/](https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/)**\n\n*(सभी परिवर्तन आपके GitHub रिपॉजिटरी में स्वतः सहेज दिए गए हैं।)*",
+      "status": "completed",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "5b6839fb-473f-4fab-be62-be39f54286c9",
+      "created_at": "2026-11-18T05:22:47.038Z",
+      "sender": "macOS",
+      "is_cancelled": false
     }
   ]
 }

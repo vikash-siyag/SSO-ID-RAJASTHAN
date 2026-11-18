@@ -792,7 +792,7 @@ li {
    Featured Blog Posts / Articles Section
    ========================================================================== */
 .articles-section {
-  padding: 3.5rem 0;
+  padding: 1.5rem 0;
   background-color: var(--bg-surface);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);

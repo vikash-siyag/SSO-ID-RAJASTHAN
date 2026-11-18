@@ -1,75 +1,89 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/</loc>
+    <loc>https://gbgramg.in/</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/about.html</loc>
+    <loc>https://gbgramg.in/about.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/contact.html</loc>
+    <loc>https://gbgramg.in/contact.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/privacy-policy.html</loc>
+    <loc>https://gbgramg.in/privacy-policy.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
   <url>
-    <loc>https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/disclaimer.html</loc>
+    <loc>https://gbgramg.in/disclaimer.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
   <url>
-    <loc>https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/blog/how-to-create-sso-id.html</loc>
+    <loc>https://gbgramg.in/blog/how-to-create-sso-id.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/blog/sso-login-recruitment-portal.html</loc>
+    <loc>https://gbgramg.in/blog/sso-login-recruitment-portal.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/blog/forgot-sso-id-password-reset.html</loc>
+    <loc>https://gbgramg.in/blog/forgot-sso-id-password-reset.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/blog/link-jan-aadhaar-sso.html</loc>
+    <loc>https://gbgramg.in/blog/link-jan-aadhaar-sso.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/blog/rajasthan-scholarship-sso.html</loc>
+    <loc>https://gbgramg.in/blog/rajasthan-scholarship-sso.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/blog/sso-id-merge-deactivate-delete.html</loc>
+    <loc>https://gbgramg.in/blog/sso-id-merge-deactivate-delete.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/blog/emitra-sso-login-services.html</loc>
+    <loc>https://gbgramg.in/emitra-sso-login-services.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
 </urlset>

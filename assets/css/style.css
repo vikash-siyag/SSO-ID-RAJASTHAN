@@ -1403,3 +1403,21 @@ tr:hover td {
     display: none;
   }
 }
+/* stop the page from being wider than the screen */
+html, body { max-width: 100%; overflow-x: clip; }
+
+/* format checker form */
+.tool-input { min-width: 0; width: 100%; }
+
+@media (max-width: 600px) {
+  .tool-input-group { flex-direction: column; }
+  .tool-input-group .btn { width: 100%; justify-content: center; }
+}
+
+/* header fits small phones */
+@media (max-width: 480px) {
+  .header-actions .btn { display: none; } /* login is in the bottom bar */
+  .brand-title { font-size: 1.05rem; }
+  .brand-tagline { font-size: 0.68rem; }
+  .brand-link { min-width: 0; }
+}

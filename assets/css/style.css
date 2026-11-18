@@ -1441,3 +1441,11 @@ html, body { max-width: 100%; overflow-x: clip; }
   .brand-tagline { font-size: 0.68rem; }
   .brand-link { min-width: 0; }
 }
+.content-layout { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 993px) {
+  .content-layout { grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr); }
+}
+.content-layout > * { min-width: 0; }
+.guide-article { overflow-wrap: anywhere; }
+.guide-article img, .guide-article iframe { max-width: 100%; height: auto; }
+.guide-article code { white-space: normal; word-break: break-word; }

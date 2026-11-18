@@ -1421,3 +1421,23 @@ html, body { max-width: 100%; overflow-x: clip; }
   .brand-tagline { font-size: 0.68rem; }
   .brand-link { min-width: 0; }
 }
+.guide-article { padding: 2.5rem; }
+
+@media (max-width: 768px) {
+  .guide-article { padding: 1.5rem !important; }
+  .hero-grid, .content-layout { gap: 1.5rem; }
+  .guide-article, .guide-article p, .guide-article li {
+    overflow-wrap: anywhere; /* long URLs / Hindi strings */
+  }
+  .responsive-table table { min-width: 560px; } /* scrolls inside wrapper */
+}
+
+@media (max-width: 480px) {
+  .container { padding-left: 1rem; padding-right: 1rem; }
+  .direct-buttons-grid { grid-template-columns: 1fr; }
+  .guide-article { padding: 1.1rem !important; }
+  .header-inner { height: 64px; }
+  .main-nav { top: 64px; }
+  .ticker-badge { display: none; }
+  table { font-size: 0.82rem; }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/sitemap.xml

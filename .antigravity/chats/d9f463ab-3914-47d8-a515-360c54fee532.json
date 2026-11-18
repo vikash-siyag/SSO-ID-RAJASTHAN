@@ -52,6 +52,18 @@
       "created_at": "2026-11-18T05:22:47.038Z",
       "sender": "macOS",
       "is_cancelled": false
+    },
+    {
+      "id": "95a872fd-896c-4587-abfc-2075a1048c62",
+      "role": "user",
+      "content": "isse blogger me kese dalu",
+      "status": "pending",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-11-18T05:50:28.290Z",
+      "sender": "ios",
+      "is_cancelled": false
     }
   ]
 }

@@ -1,0 +1,2536 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsversion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  <title><data:view.title.escaped/></title>
+  <b:include data='blog' name='all-head-content'/>
+
+  <!-- Preconnect to Google Fonts & Assets -->
+  <link href='https://fonts.googleapis.com' rel='preconnect'/>
+  <link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+  <link href='https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700&amp;display=swap' rel='stylesheet'/>
+
+  <b:skin><![CDATA[
+/* ==========================================================================
+   Rajasthan SSO Guide - Modern High-Performance Blogger Stylesheet
+   Optimized for Core Web Vitals, SEO, Ad Placements & Mobile Usability
+   ========================================================================== */
+
+:root {
+  --primary: #0f2942;
+  --primary-dark: #0a1b2c;
+  --primary-light: #1e3a8a;
+  --secondary: #ea580c;
+  --secondary-hover: #c2410c;
+  --accent: #f59e0b;
+  --accent-light: #fef3c7;
+  --success: #16a34a;
+  --info: #0284c7;
+  --warning: #d97706;
+  --danger: #dc2626;
+
+  --bg-page: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+  --border-light: #edf2f7;
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-light: #94a3b8;
+  --text-on-primary: #ffffff;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-hover: 0 20px 25px -5px rgba(15, 41, 66, 0.1), 0 10px 10px -5px rgba(15, 41, 66, 0.04);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Mukta", "Noto Sans Devanagari", Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --container-width: 1200px;
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  --primary: #1e293b;
+  --primary-dark: #0f172a;
+  --primary-light: #334155;
+  --bg-page: #0b0f17;
+  --bg-surface: #131b26;
+  --bg-subtle: #1a2332;
+  --bg-card: #151e2c;
+  --border-color: #232f42;
+  --border-light: #1b2637;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+}
+
+/* Base Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+p {
+  margin-bottom: 1.15rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); margin-top: 1.5rem; }
+h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); margin-top: 1.25rem; }
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+
+/* Top Official Ticker Bar */
+.gov-top-bar {
+  background: linear-gradient(90deg, #091a2b 0%, #0f2942 50%, #173657 100%);
+  color: #e2e8f0;
+  font-size: 0.8125rem;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid var(--secondary);
+}
+
+.gov-top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ticker-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-badge {
+  background-color: var(--secondary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulseBadge 2s infinite;
+}
+
+@keyframes pulseBadge {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.ticker-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.top-bar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.top-bar-links a {
+  color: #cbd5e1;
+  font-size: 0.78rem;
+}
+
+.top-bar-links a:hover {
+  color: var(--accent);
+}
+
+/* Main Site Header */
+.site-header {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+[data-theme="dark"] .brand-title {
+  color: #f8fafc;
+}
+
+.brand-title span {
+  color: var(--secondary);
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.25rem;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--secondary);
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--secondary);
+  border-radius: 2px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Action Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--secondary) 0%, #c2410c 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(234, 88, 12, 0.35);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-light);
+  color: #ffffff;
+}
+
+.btn-outline {
+  border-color: var(--border-color);
+  background: var(--bg-surface);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.btn-sm {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8125rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+  padding: 0.875rem 1.75rem;
+  font-size: 1.05rem;
+  border-radius: var(--radius-md);
+}
+
+.theme-toggle-btn,
+.mobile-menu-toggle {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle-btn:hover,
+.mobile-menu-toggle:hover {
+  background-color: var(--bg-subtle);
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+  background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.12), transparent 45%),
+              linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-subtle) 100%);
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+[data-theme="dark"] .verified-pill {
+  background-color: #064e3b;
+  color: #6ee7b7;
+  border-color: #047857;
+}
+
+.hero-title {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+[data-theme="dark"] .hero-title {
+  color: #ffffff;
+}
+
+.hero-title .highlight {
+  color: var(--secondary);
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.quick-stats-row {
+  display: flex;
+  gap: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+[data-theme="dark"] .stat-number {
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Quick Action Card Box (Hero right side) */
+.portal-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.portal-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ea580c 0%, #f59e0b 50%, #0f2942 100%);
+}
+
+.portal-card-header {
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.portal-card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.portal-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.direct-buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.portal-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 0.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-surface);
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.portal-btn:hover {
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.portal-btn-primary {
+  background: linear-gradient(135deg, #0f2942 0%, #1e3a8a 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
+.portal-btn-primary:hover {
+  background: linear-gradient(135deg, #0a1b2c 0%, #172554 100%);
+  color: #fff;
+}
+
+.portal-btn-secondary {
+  background: linear-gradient(135deg, #ea580c 0%, #d97706 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
+.portal-btn-secondary:hover {
+  background: linear-gradient(135deg, #c2410c 0%, #b45309 100%);
+  color: #fff;
+}
+
+.portal-btn-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.portal-btn-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.portal-btn-sub {
+  font-size: 0.72rem;
+  opacity: 0.85;
+}
+
+.portal-card-note {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background-color: var(--bg-subtle);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ==========================================================================
+   Interactive SSO Verification Tool
+   ========================================================================== */
+.tool-section {
+  padding: 2.5rem 0;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tool-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+[data-theme="dark"] .tool-card {
+  background: linear-gradient(135deg, #131b26 0%, #1a2332 100%);
+}
+
+.tool-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+}
+
+.tool-input-group {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 0.5rem;
+}
+
+.tool-input {
+  flex: 1;
+  padding: 0.75rem 1.25rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  outline: none;
+  transition: var(--transition);
+}
+
+.tool-input:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.15);
+}
+
+.tool-result {
+  max-width: 600px;
+  margin: 1rem auto 0;
+  display: none;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+}
+
+.tool-result.show {
+  display: block;
+}
+
+.tool-result.valid {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.tool-result.invalid {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+/* ==========================================================================
+   Services Grid / Quick Directory
+   ========================================================================== */
+.services-section {
+  padding: 3rem 0;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 2.5rem;
+}
+
+.section-tag {
+  color: var(--secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.35rem;
+  display: inline-block;
+}
+
+.services-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.service-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.35rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.service-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.service-category-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-subtle);
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.service-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.service-hindi-title {
+  font-size: 0.82rem;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.service-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.service-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.service-link:hover {
+  gap: 0.6rem;
+}
+
+/* ==========================================================================
+   Featured Blog Posts / Articles Section
+   ========================================================================== */
+.articles-section {
+  padding: 3.5rem 0;
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.article-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-color);
+}
+
+.article-thumb-wrapper {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(135deg, #0f2942 0%, #1e3a8a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.article-thumb-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: radial-gradient(#fff 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.article-thumb-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--secondary);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+
+.article-thumb-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  z-index: 1;
+}
+
+.article-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.article-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.article-title a {
+  color: var(--text-main);
+}
+
+.article-title a:hover {
+  color: var(--secondary);
+}
+
+.article-excerpt {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.article-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+}
+
+.article-author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.author-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   Comprehensive SEO Guide (In-Depth Content Section)
+   ========================================================================== */
+.guide-content-section {
+  padding: 3.5rem 0;
+}
+
+.content-layout {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 2.5rem;
+}
+
+.guide-article {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+}
+
+.table-of-contents {
+  background-color: var(--bg-subtle);
+  border-left: 4px solid var(--secondary);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.toc-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+[data-theme="dark"] .toc-title {
+  color: #fff;
+}
+
+.toc-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.toc-list li {
+  margin-bottom: 0.4rem;
+}
+
+.toc-list a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.toc-list a:hover {
+  color: var(--secondary);
+  transform: translateX(4px);
+}
+
+/* Step-by-Step Timeline Box */
+.timeline-steps {
+  margin: 2rem 0;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-steps::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 12px;
+  width: 2px;
+  background-color: var(--border-color);
+}
+
+.step-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.step-item:last-child {
+  margin-bottom: 0;
+}
+
+.step-marker {
+  position: absolute;
+  left: -2rem;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 4px var(--bg-card);
+}
+
+.step-body h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Informational Callouts */
+.callout {
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.callout-info {
+  background-color: #eff6ff;
+  border-left: 4px solid var(--info);
+  color: #1e40af;
+}
+
+[data-theme="dark"] .callout-info {
+  background-color: #172554;
+  color: #93c5fd;
+}
+
+.callout-warning {
+  background-color: #fffbeb;
+  border-left: 4px solid var(--warning);
+  color: #92400e;
+}
+
+[data-theme="dark"] .callout-warning {
+  background-color: #451a03;
+  color: #fde68a;
+}
+
+/* Tables */
+.responsive-table {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--bg-subtle);
+  color: var(--text-main);
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+tr:hover td {
+  background-color: rgba(245, 158, 11, 0.04);
+}
+
+/* Sidebar */
+.guide-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.sidebar-widget {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.widget-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quick-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.quick-links-list li:last-child {
+  border-bottom: none;
+}
+
+.quick-links-list a {
+  color: var(--text-main);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quick-links-list a:hover {
+  color: var(--secondary);
+}
+
+.helpline-box {
+  background: linear-gradient(135deg, #0f2942 0%, #1e3a8a 100%);
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.helpline-number {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0.5rem 0;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   FAQ Section
+   ========================================================================== */
+.faq-section {
+  padding: 3.5rem 0;
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+}
+
+.faq-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background-color: var(--bg-card);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition);
+}
+
+.faq-question:hover {
+  background-color: var(--bg-subtle);
+}
+
+.faq-icon {
+  font-size: 1.25rem;
+  transition: transform 0.25s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.faq-item.active .faq-answer {
+  padding: 0.5rem 1.5rem 1.25rem;
+  max-height: 500px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background-color: #091422;
+  color: #cbd5e1;
+  padding-top: 4rem;
+  margin-top: auto;
+  border-top: 4px solid var(--secondary);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.25fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand p {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.footer-col h4 {
+  color: #f8fafc;
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-col h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background-color: var(--secondary);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  font-size: 0.88rem;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+  padding-left: 4px;
+}
+
+.disclaimer-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  background-color: #050b14;
+  padding: 1.5rem 0;
+  font-size: 0.8125rem;
+  color: #64748b;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Mobile Sticky Action Bar */
+.mobile-sticky-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  padding: 0.65rem 1rem;
+  z-index: 999;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-sticky-bar-inner {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mobile-sticky-bar .btn {
+  flex: 1;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: var(--shadow-lg);
+  }
+  .main-nav.show {
+    display: flex;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .direct-buttons-grid {
+    grid-template-columns: 1fr;
+  }
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .mobile-sticky-bar {
+    display: block;
+  }
+  body {
+    padding-bottom: 64px; /* Space for sticky bar */
+  }
+  .gov-top-bar .top-bar-links {
+    display: none;
+  }
+}
+
+  ]]></b:skin>
+</head>
+<body expr:class='data:blog.pageType'>
+
+  <div class="gov-top-bar">
+    <div class="container">
+      <div class="ticker-wrap">
+        <span class="ticker-badge">ताज़ा अपडेट 2026</span>
+        <div class="ticker-content">
+          📢 <strong>राजस्थान CET &amp; RPSC भर्तियां:</strong> एसएसओ रिक्रूटमेंट पोर्टल पर आवेदन चालू • जन आधार e-KYC अनिवार्य • हेल्पलाइन: 0141-5123717
+        </div>
+      </div>
+      <ul class="top-bar-links">
+        <li><a href="https://sso.rajasthan.gov.in" target="_blank" rel="noopener">आधिकारिक वेबसाइट ↗</a></li>
+        <li><a href="#helpline">हेल्पडेस्क</a></li>
+        <li><a href="contact.html">संपर्क</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" title="Rajasthan SSO Portal Guide 2026">
+        <img src="https://antigravity.luch.dev/site/ce5c7d26-4d5b-4628-8fbb-b9b84c3c5fe5/378fd27bc17b86156ec4e186/assets/images/favicon.svg" alt="Rajasthan SSO Emblem" width="42" height="42" />
+        <div>
+          <div class="brand-title">Rajasthan<span>SSO</span>.guide</div>
+          <div class="brand-tagline">राजस्थान एसएसओ आईडी पोर्टल 2026</div>
+        </div>
+      </a>
+
+      <!-- Desktop &amp; Mobile Navigation -->
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">होम (Home)</a></li>
+          <li><a href="blog/how-to-create-sso-id.html">रजिस्ट्रेशन गाइड</a></li>
+          <li><a href="blog/sso-login-recruitment-portal.html">भर्ती &amp; एडमिट कार्ड</a></li>
+          <li><a href="blog/forgot-sso-id-password-reset.html">पासवर्ड रीसेट</a></li>
+          <li><a href="blog/link-jan-aadhaar-sso.html">जन आधार लिंक</a></li>
+          <li><a href="#services">प्रमुख सेवाएं</a></li>
+          <li><a href="#faq">सामान्य प्रश्न</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+          🌙
+        </button>
+        <a href="https://sso.rajasthan.gov.in" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+          SSO लॉगिन ↗
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  
+
+  <b:if cond='data:view.isHomepage'>
+    <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="verified-pill">
+          <span>✓</span> 2026 प्रामाणिक गाइड • राजस्थान सिंगल साइन ऑन
+        </div>
+        <h1 class="hero-title">
+          Rajasthan <span class="highlight">SSO ID</span> Login &amp; New Registration 2026
+        </h1>
+        <p class="hero-subtitle">
+          राजस्थान एसएसओ आईडी (sso.rajasthan.gov.in) आधिकारिक पोर्टल: नया रजिस्ट्रेशन कैसे करें, लॉगिन समस्या का समाधान, सरकारी भर्ती परीक्षा आवेदन (RPSC/RSMSSB CET), एडमिट कार्ड डाउनलोड एवं जन आधार e-KYC की सम्पूर्ण गाइड।
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://sso.rajasthan.gov.in" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            ⚡ आधिकारिक SSO Login पोर्टल ↗
+          </a>
+          <a href="blog/how-to-create-sso-id.html" class="btn btn-outline btn-lg">
+            📖 नया रजिस्ट्रेशन गाइड पढ़ें
+          </a>
+        </div>
+
+        <div class="quick-stats-row">
+          <div class="stat-item">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">सरकारी डिजिटल सेवाएं</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2.8 Cr+</span>
+            <span class="stat-label">पंजीकृत नागरिक</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">सुरक्षित व प्रमाणित</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Direct Card Box -->
+      <div class="portal-card">
+        <div class="portal-card-header">
+          <h2 class="portal-card-title">त्वरित पोर्टल सेवाएं (Quick Access)</h2>
+          <p class="portal-card-desc">आधिकारिक राजस्थान सरकार सर्वर से सीधे लिंक</p>
+        </div>
+
+        <div class="direct-buttons-grid">
+          <a href="https://sso.rajasthan.gov.in/signin" target="_blank" rel="noopener" class="portal-btn portal-btn-primary">
+            <span class="portal-btn-icon">🔐</span>
+            <span class="portal-btn-label">SSO लॉगिन (Sign In)</span>
+            <span class="portal-btn-sub">नागरिक / कर्मचारी</span>
+          </a>
+
+          <a href="https://sso.rajasthan.gov.in/register" target="_blank" rel="noopener" class="portal-btn portal-btn-secondary">
+            <span class="portal-btn-icon">📝</span>
+            <span class="portal-btn-label">नया रजिस्ट्रेशन</span>
+            <span class="portal-btn-sub">जन आधार / गूगल</span>
+          </a>
+
+          <a href="blog/forgot-sso-id-password-reset.html" class="portal-btn">
+            <span class="portal-btn-icon">🔑</span>
+            <span class="portal-btn-label">पासवर्ड भूल गए?</span>
+            <span class="portal-btn-sub">Forgot Password</span>
+          </a>
+
+          <a href="blog/sso-login-recruitment-portal.html" class="portal-btn">
+            <span class="portal-btn-icon">📋</span>
+            <span class="portal-btn-label">भर्ती &amp; एडमिट कार्ड</span>
+            <span class="portal-btn-sub">Recruitment Portal</span>
+          </a>
+        </div>
+
+        <div class="portal-card-note">
+          <span>ℹ️</span> <strong>सुझाव:</strong> हमेशा केवल आधिकारिक वेबसाइट <code>sso.rajasthan.gov.in</code> पर ही अपना पासवर्ड दर्ज करें।
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive SSO Format Validator Tool -->
+  
+    <section class="tool-section">
+    <div class="container">
+      <div class="tool-card">
+        <div class="tool-header">
+          <span class="section-tag">ऑनलाइन टूल</span>
+          <h2>एसएसओ आईडी फॉर्मेट चेकर (SSO ID Format Validator)</h2>
+          <p>अपनी एसएसओ आईडी की वैद्यता जांचें कि क्या यह आधिकारिक पोर्टल के नियमों के अनुरूप है अथवा नहीं।</p>
+        </div>
+
+        <div class="tool-input-group">
+          <input type="text" id="ssoCheckInput" class="tool-input" placeholder="उदाहरण: rj_rahul99 या 10-अंकीय जन आधार संख्या" aria-label="Enter SSO ID" />
+          <button id="checkSsoBtn" class="btn btn-primary">जांचें (Check Format)</button>
+        </div>
+
+        <div id="ssoCheckResult" class="tool-result"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Blog Articles Section -->
+  
+    <section class="articles-section" id="articles">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">नवीनतम लेख एवं मार्गदर्शन</span>
+        <h2>राजस्थान SSO महत्वपूर्ण आर्टिकल्स (2026 Guides)</h2>
+        <p>एसएसओ पोर्टल से संबंधित समस्त प्रक्रियाओं की सचित्र व चरणबद्ध जानकारी।</p>
+      </div>
+
+      <div class="articles-grid">
+        <!-- Article 1 -->
+        <article class="article-card">
+          <div class="article-thumb-wrapper">
+            <div class="article-thumb-pattern"></div>
+            <span class="article-thumb-badge">सर्वाधिक लोकप्रिय</span>
+            <div>
+              <div class="article-thumb-icon">🆔</div>
+              <h3 style="color:#fff; font-size:1.15rem; margin:0;">SSO Registration 2026</h3>
+            </div>
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 अपडेटेड: जनवरी 2026</span>
+              <span>⏱️ 5 मिनट का पाठ</span>
+            </div>
+            <h3 class="article-title">
+              <a href="blog/how-to-create-sso-id.html">एसएसओ आईडी कैसे बनाएं? 2026 में नया रजिस्ट्रेशन करने की पूरी प्रक्रिया</a>
+            </h3>
+            <p class="article-excerpt">
+              जन आधार कार्ड (Jan Aadhaar) एवं गूगल आईडी से एसएसओ आईडी बनाने का आसान तरीका। जानिए आवश्यक दस्तावेज और स्टेप-बाय-स्टेप स्क्रीनशॉट गाइड।
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <span class="author-avatar">राज</span>
+                <span>विकास सियाग</span>
+              </div>
+              <a href="blog/how-to-create-sso-id.html" class="btn btn-outline btn-sm">पूरा पढ़ें →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-card">
+          <div class="article-thumb-wrapper" style="background: linear-gradient(135deg, #ea580c 0%, #b45309 100%);">
+            <div class="article-thumb-pattern"></div>
+            <span class="article-thumb-badge">भर्ती अपडेट</span>
+            <div>
+              <div class="article-thumb-icon">📜</div>
+              <h3 style="color:#fff; font-size:1.15rem; margin:0;">Recruitment &amp; Admit Card</h3>
+            </div>
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 अपडेटेड: 2026</span>
+              <span>⏱️ 4 मिनट का पाठ</span>
+            </div>
+            <h3 class="article-title">
+              <a href="blog/sso-login-recruitment-portal.html">राजस्थान SSO रिक्रूटमेंट पोर्टल: सरकारी भर्ती फॉर्म &amp; एडमिट कार्ड डाउनलोड</a>
+            </h3>
+            <p class="article-excerpt">
+              RPSC, RSMSSB, राजस्थान सीईटी (CET), पुलिस कांस्टेबल व शिक्षक भर्ती के लिए ऑनलाइन फॉर्म भरने और एडमिट कार्ड डाउनलोड करने की विधि।
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <span class="author-avatar">राज</span>
+                <span>संपादकीय टीम</span>
+              </div>
+              <a href="blog/sso-login-recruitment-portal.html" class="btn btn-outline btn-sm">पूरा पढ़ें →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-card">
+          <div class="article-thumb-wrapper" style="background: linear-gradient(135deg, #1e3a8a 0%, #0369a1 100%);">
+            <div class="article-thumb-pattern"></div>
+            <span class="article-thumb-badge">त्वरित समाधान</span>
+            <div>
+              <div class="article-thumb-icon">🔑</div>
+              <h3 style="color:#fff; font-size:1.15rem; margin:0;">Password Reset Guide</h3>
+            </div>
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 2026 गाइड</span>
+              <span>⏱️ 3 मिनट का पाठ</span>
+            </div>
+            <h3 class="article-title">
+              <a href="blog/forgot-sso-id-password-reset.html">एसएसओ आईडी या पासवर्ड भूल गए? 2 मिनट में ऐसे करें तुरंत रिकवर</a>
+            </h3>
+            <p class="article-excerpt">
+              मोबाइल नंबर, ईमेल या जन आधार के माध्यम से अपनी भूली हुई एसएसओ आईडी रिकवर करें और नया पासवर्ड रीसेट करने का 100% सही तरीका।
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <span class="author-avatar">राज</span>
+                <span>सपोर्ट डेस्क</span>
+              </div>
+              <a href="blog/forgot-sso-id-password-reset.html" class="btn btn-outline btn-sm">पूरा पढ़ें →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="article-card">
+          <div class="article-thumb-wrapper" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
+            <div class="article-thumb-pattern"></div>
+            <span class="article-thumb-badge">अनिवार्य e-KYC</span>
+            <div>
+              <div class="article-thumb-icon">💳</div>
+              <h3 style="color:#fff; font-size:1.15rem; margin:0;">Jan Aadhaar Link</h3>
+            </div>
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 आवश्यक निर्देश</span>
+              <span>⏱️ 4 मिनट का पाठ</span>
+            </div>
+            <h3 class="article-title">
+              <a href="blog/link-jan-aadhaar-sso.html">एसएसओ आईडी में जन आधार कार्ड कैसे लिंक करें? e-KYC पूरा करने का तरीका</a>
+            </h3>
+            <p class="article-excerpt">
+              राजस्थान सरकार ने सभी एसएसओ खातों में जन आधार e-KYC अनिवार्य कर दिया है। बिना जन आधार लिंक किए भर्ती फॉर्म नहीं भरे जा सकेंगे।
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <span class="author-avatar">राज</span>
+                <span>हेल्पलाइन टीम</span>
+              </div>
+              <a href="blog/link-jan-aadhaar-sso.html" class="btn btn-outline btn-sm">पूरा पढ़ें →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="article-card">
+          <div class="article-thumb-wrapper" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);">
+            <div class="article-thumb-pattern"></div>
+            <span class="article-thumb-badge">छात्रवृत्ति</span>
+            <div>
+              <div class="article-thumb-icon">🎓</div>
+              <h3 style="color:#fff; font-size:1.15rem; margin:0;">Scholarship Portal</h3>
+            </div>
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 सत्र 2025-26</span>
+              <span>⏱️ 5 मिनट का पाठ</span>
+            </div>
+            <h3 class="article-title">
+              <a href="blog/rajasthan-scholarship-sso.html">राजस्थान उत्तर मैट्रिक छात्रवृत्ति योजना 2026: एसएसओ से ऑनलाइन आवेदन व स्टेटस</a>
+            </h3>
+            <p class="article-excerpt">
+              SC, ST, OBC, EBC और DNT श्रेणी के विद्यार्थियों के लिए SJMS पोर्टल से छात्रवृत्ति फॉर्म भरने की पात्रता, नियम और बैंक लिंकिंग गाइड।
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <span class="author-avatar">राज</span>
+                <span>शिक्षा डेस्क</span>
+              </div>
+              <a href="blog/rajasthan-scholarship-sso.html" class="btn btn-outline btn-sm">पूरा पढ़ें →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="article-card">
+          <div class="article-thumb-wrapper" style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);">
+            <div class="article-thumb-pattern"></div>
+            <span class="article-thumb-badge">तकनीकी समाधान</span>
+            <div>
+              <div class="article-thumb-icon">🔀</div>
+              <h3 style="color:#fff; font-size:1.15rem; margin:0;">SSO ID Merge &amp; Deactivate</h3>
+            </div>
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 समस्या निवारण</span>
+              <span>⏱️ 5 मिनट का पाठ</span>
+            </div>
+            <h3 class="article-title">
+              <a href="blog/sso-id-merge-deactivate-delete.html">दो SSO ID को एक कैसे करें? Jan Aadhaar Already Linked एरर व मर्ज समाधान</a>
+            </h3>
+            <p class="article-excerpt">
+              गलती से 2 एसएसओ आईडी बन गई हैं? जानिए अतिरिक्त आईडी को सुरक्षित रूप से मर्ज या डीएक्टिवेट करने की चरणबद्ध ऑनलाइन प्रक्रिया।
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <span class="author-avatar">राज</span>
+                <span>तकनीकी टीम</span>
+              </div>
+              <a href="blog/sso-id-merge-deactivate-delete.html" class="btn btn-outline btn-sm">पूरा पढ़ें →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 7 -->
+        <article class="article-card">
+          <div class="article-thumb-wrapper" style="background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);">
+            <div class="article-thumb-pattern"></div>
+            <span class="article-thumb-badge">ई-मित्र गाइड</span>
+            <div>
+              <div class="article-thumb-icon">🏢</div>
+              <h3 style="color:#fff; font-size:1.15rem; margin:0;">E-Mitra SSO Login 2026</h3>
+            </div>
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 आधिकारिक गाइड</span>
+              <span>⏱️ 6 मिनट का पाठ</span>
+            </div>
+            <h3 class="article-title">
+              <a href="blog/emitra-sso-login-services.html">E-Mitra SSO Login 2026: कियोस्क व सिटिजन लॉगिन, रेट लिस्ट एवं 500+ सेवाएँ</a>
+            </h3>
+            <p class="article-excerpt">
+              जाति प्रमाण पत्र, मूल निवास, बिजली-पानी बिल भुगतान, पेंशन वार्षिक सत्यापन और नया कियोस्क रजिस्ट्रेशन की पूर्ण जानकारी।
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <span class="author-avatar">राज</span>
+                <span>ई-मित्र डेस्क</span>
+              </div>
+              <a href="blog/emitra-sso-login-services.html" class="btn btn-outline btn-sm">पूरा पढ़ें →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Directory Section -->
+  
+    <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">सेवा निर्देशिका</span>
+        <h2>राजस्थान SSO के मुख्य 40+ विभाग एवं सेवाएं</h2>
+        <p>अपनी आवश्यक सेवा चुनें और सीधे संबंधित सरकारी पोर्टल पर पहुंचें।</p>
+      </div>
+
+      <div class="services-filter-bar">
+        <button class="filter-btn active" data-filter="all">सभी सेवाएं (All)</button>
+        <button class="filter-btn" data-filter="recruitment">भर्ती &amp; परीक्षाएं (Recruitment)</button>
+        <button class="filter-btn" data-filter="citizen">नागरिक सेवाएं (Citizen)</button>
+        <button class="filter-btn" data-filter="business">उद्योग एवं व्यापार (Udyog)</button>
+        <button class="filter-btn" data-filter="employee">राजकीय कर्मचारी (Govt Employee)</button>
+      </div>
+
+      <div class="services-grid" id="servicesGrid">
+        <!-- Service 1 -->
+        <div class="service-card" data-category="recruitment">
+          <div class="service-card-top">
+            <div class="service-icon-box">📝</div>
+            <span class="service-category-badge">भर्ती</span>
+          </div>
+          <h3 class="service-title">Recruitment Portal</h3>
+          <div class="service-hindi-title">आरपीएससी एवं अधीनस्थ बोर्ड भर्ती</div>
+          <p class="service-desc">राजस्थान की समस्त प्रतियोगी परीक्षाओं के ऑनलाइन आवेदन, फीस भुगतान और प्रवेश पत्र डाउनलोड हेतु।</p>
+          <a href="blog/sso-login-recruitment-portal.html" class="service-link">गाइड देखें →</a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card" data-category="citizen">
+          <div class="service-card-top">
+            <div class="service-icon-box">💻</div>
+            <span class="service-category-badge">नागरिक</span>
+          </div>
+          <h3 class="service-title">e-Mitra (ई-मित्र)</h3>
+          <div class="service-hindi-title">नागरिक सेवा केंद्र</div>
+          <p class="service-desc">जाति प्रमाण पत्र, मूल निवास, राशन कार्ड, बिजली-पानी बिल भुगतान और 500+ सार्वजनिक सेवाएं।</p>
+          <a href="blog/emitra-sso-login-services.html" class="service-link">ई-मित्र गाइड व रेट लिस्ट →</a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card" data-category="citizen">
+          <div class="service-card-top">
+            <div class="service-icon-box">🆔</div>
+            <span class="service-category-badge">नागरिक</span>
+          </div>
+          <h3 class="service-title">Jan Aadhaar (जन आधार)</h3>
+          <div class="service-hindi-title">एक नंबर, एक कार्ड, एक पहचान</div>
+          <p class="service-desc">राजस्थान के हर परिवार का डिजिटल पहचान पत्र। एसएसओ लॉगिन और छात्रवृत्ति के लिए अनिवार्य।</p>
+          <a href="blog/link-jan-aadhaar-sso.html" class="service-link">लिंकिंग गाइड →</a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card" data-category="recruitment">
+          <div class="service-card-top">
+            <div class="service-icon-box">🎓</div>
+            <span class="service-category-badge">शिक्षा</span>
+          </div>
+          <h3 class="service-title">SJMS Scholarship</h3>
+          <div class="service-hindi-title">उत्तर मैट्रिक छात्रवृत्ति</div>
+          <p class="service-desc">सामाजिक न्याय एवं अधिकारिता विभाग द्वारा उच्च शिक्षा में अध्ययनरत छात्रों को वार्षिक छात्रवृत्ति।</p>
+          <a href="blog/rajasthan-scholarship-sso.html" class="service-link">छात्रवृत्ति विवरण →</a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card" data-category="employee">
+          <div class="service-card-top">
+            <div class="service-icon-box">🏛️</div>
+            <span class="service-category-badge">कर्मचारी</span>
+          </div>
+          <h3 class="service-title">Raj-Kaj (राज-काज)</h3>
+          <div class="service-hindi-title">ई-ऑफिस एवं कर्मचारी सेवाएं</div>
+          <p class="service-desc">राजस्थान सरकारी कर्मचारियों के लिए वार्षिक कार्य मूल्यांकन (APAR), अवकाश आवेदन एवं फाइल ट्रैकिंग।</p>
+          <a href="https://sso.rajasthan.gov.in" target="_blank" rel="noopener" class="service-link">राज-काज लॉगिन ↗</a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card" data-category="employee">
+          <div class="service-card-top">
+            <div class="service-icon-box">💰</div>
+            <span class="service-category-badge">कर्मचारी</span>
+          </div>
+          <h3 class="service-title">SIPF Portal</h3>
+          <div class="service-hindi-title">राज्य बीमा एवं प्रावधायी निधि</div>
+          <p class="service-desc">GPF, SI पासबुक, पॉलिसी लोन, कटौती विवरण एवं पेंशन लेजर का ऑनलाइन प्रबंधन।</p>
+          <a href="https://sso.rajasthan.gov.in" target="_blank" rel="noopener" class="service-link">SIPF सेवाएं ↗</a>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="service-card" data-category="business">
+          <div class="service-card-top">
+            <div class="service-icon-box">🏭</div>
+            <span class="service-category-badge">उद्योग</span>
+          </div>
+          <h3 class="service-title">BRN Registration</h3>
+          <div class="service-hindi-title">बिजनेस रजिस्ट्रेशन नंबर</div>
+          <p class="service-desc">राजस्थान में नए व्यवसाय, दुकान या उद्योग के लिए बिजनेस रजिस्ट्रेशन नंबर (BRN) जारी करना।</p>
+          <a href="https://sso.rajasthan.gov.in" target="_blank" rel="noopener" class="service-link">उद्योग पंजीकरण ↗</a>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="service-card" data-category="citizen">
+          <div class="service-card-top">
+            <div class="service-icon-box">🗺️</div>
+            <span class="service-category-badge">राजस्व</span>
+          </div>
+          <h3 class="service-title">Apna Khata (जमाबंदी)</h3>
+          <div class="service-hindi-title">भू-अभिलेख एवं नक्शा नकल</div>
+          <p class="service-desc">अपनी कृषि भूमि की जमाबंदी नकल, भू-नक्शा और नामांतरण की डिजिटल प्रति प्राप्त करें।</p>
+          <a href="https://apnakhata.rajasthan.gov.in" target="_blank" rel="noopener" class="service-link">जमाबंदी देखें ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive SEO Guide &amp; In-Depth Content -->
+  
+    <section class="guide-content-section">
+    <div class="container content-layout">
+      <!-- Main Content Area -->
+      <article class="guide-article">
+        <h2>राजस्थान एसएसओ पोर्टल क्या है? (What is SSO Rajasthan?)</h2>
+        <p>
+          <strong>Rajasthan SSO (Single Sign-On)</strong> राजस्थान सरकार के सूचना प्रौद्योगिकी एवं संचार विभाग (DoIT&amp;C) द्वारा विकसित एक अत्यंत सुरक्षित और एकीकृत डिजिटल प्लेटफॉर्म है। इसका आधिकारिक वेब पता <strong>sso.rajasthan.gov.in</strong> है।
+        </p>
+        <p>
+          पहले नागरिकों को अलग-अलग सरकारी सेवाओं (जैसे ई-मित्र, आरपीएससी भर्ती, छात्रवृत्ति, राशन कार्ड आदि) के लिए भिन्न-भिन्न वेबसाइटों पर अलग यूजर आईडी और पासवर्ड बनाने पड़ते थे। इस समस्या को समाप्त करने के लिए राजस्थान सरकार ने एक ही "डिजिटल पहचान" (Single ID) की शुरुआत की, जिसे <strong>SSO ID</strong> कहा जाता है।
+        </p>
+
+        <!-- Table of Contents -->
+        <div class="table-of-contents">
+          <div class="toc-title">विषय सूची (Table of Contents)</div>
+          <ul class="toc-list">
+            <li><a href="#toc-types">1. राजस्थान एसएसओ आईडी के प्रकार (Citizen, Udyog, Govt)</a></li>
+            <li><a href="#toc-registration">2. नया एसएसओ रजिस्ट्रेशन कैसे करें? (Step-by-Step)</a></li>
+            <li><a href="#toc-login">3. एसएसओ आईडी लॉगिन करने की विधि (Login Process)</a></li>
+            <li><a href="#toc-recovery">4. भूली हुई एसएसओ आईडी व पासवर्ड कैसे प्राप्त करें?</a></li>
+            <li><a href="#toc-links">5. महत्वपूर्ण आधिकारिक वेबसाइट लिंक्स</a></li>
+            <li><a href="#toc-helpline">6. हेल्पलाइन नंबर एवं संपर्क सूत्र</a></li>
+          </ul>
+        </div>
+
+        <h3 id="toc-types">1. राजस्थान एसएसओ आईडी के प्रकार (Types of SSO ID)</h3>
+        <p>राजस्थान सिंगल साइन ऑन पोर्टल पर तीन श्रेणियों के तहत रजिस्ट्रेशन किया जा सकता है:</p>
+        <ul>
+          <li><strong>Citizen (नागरिक):</strong> राजस्थान के सभी स्थायी निवासी, छात्र, प्रतियोगी परीक्षा अभ्यर्थी जन आधार कार्ड (Jan Aadhaar Card) अथवा Google ID (Gmail) द्वारा नागरिक खाता बना सकते हैं।</li>
+          <li><strong>Udyog (उद्योग एवं व्यापार):</strong> उद्योगपति, व्यापारी और फर्म मालिक अपने उद्योग आधार / BRN (Business Registration Number) या SAN द्वारा रजिस्ट्रेशन कर सकते हैं।</li>
+          <li><strong>Govt Employee (राजकीय कर्मचारी):</strong> राजस्थान सरकार के सभी सेवारत कर्मचारी अपने SIPF नंबर और पासवर्ड द्वारा कर्मचारी एसएसओ आईडी बनाते हैं।</li>
+        </ul>
+
+        <div class="callout callout-info">
+          <div>💡</div>
+          <div>
+            <strong>महत्वपूर्ण सूचना:</strong> यदि आप राजस्थान की किसी भी सरकारी नौकरी (RPSC CET, Constable, REET आदि) या छात्रवृत्ति के लिए आवेदन कर रहे हैं, तो आपका <strong>जन आधार कार्ड</strong> एसएसओ आईडी से लिंक होना अनिवार्य है।
+          </div>
+        </div>
+
+        <h3 id="toc-registration">2. नया एसएसओ रजिस्ट्रेशन कैसे करें? (Step-by-Step 2026)</h3>
+        <p>नया एसएसओ अकाउंट बनाने के लिए नीचे दी गई सरल प्रक्रिया का पालन करें:</p>
+
+        <div class="timeline-steps">
+          <div class="step-item">
+            <div class="step-marker">1</div>
+            <div class="step-body">
+              <h4>आधिकारिक पोर्टल पर जाएं</h4>
+              <p>अपने मोबाइल या कंप्यूटर के ब्राउज़र में आधिकारिक वेबसाइट <code>sso.rajasthan.gov.in</code> खोलें।</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-marker">2</div>
+            <div class="step-body">
+              <h4>'Registration' टैब पर क्लिक करें</h4>
+              <p>लॉगिन फॉर्म के बगल में दिए गए <strong>Registration</strong> विकल्प पर क्लिक करें और <strong>Citizen (नागरिक)</strong> चुनें।</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-marker">3</div>
+            <div class="step-body">
+              <h4>जन आधार या गूगल का चयन करें</h4>
+              <p>राजस्थान के निवासियों के लिए <strong>Jan Aadhaar</strong> सर्वोत्तम विकल्प है। अपना जन आधार नंबर दर्ज करें और परिवार के मुखिया या सदस्य का नाम चुनकर OTP सत्यापित करें।</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-marker">4</div>
+            <div class="step-body">
+              <h4>यूजरनेम और पासवर्ड बनाएं</h4>
+              <p>अपनी पसंद की उपलब्ध SSO ID (Username) चुनें और एक मजबूत पासवर्ड (जिसमें कैपिटल अक्षर, संख्या और सिंबल हों) बनाएं।</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-marker">5</div>
+            <div class="step-body">
+              <h4>सफलतापूर्वक पंजीकरण पूर्ण</h4>
+              <p>पंजीकरण पूर्ण होते ही आपके मोबाइल नंबर पर एसएमएस द्वारा आपकी SSO ID प्राप्त हो जाएगी। अब आप लॉगिन कर सकते हैं।</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 id="toc-login">3. एसएसओ पोर्टल पर लॉगिन करने की प्रक्रिया (How to Login)</h3>
+        <ol>
+          <li>पोर्टल <strong>sso.rajasthan.gov.in/signin</strong> पर जाएं।</li>
+          <li>अपना <strong>Digital Identity (SSO ID / Username)</strong> दर्ज करें।</li>
+          <li>अपना गोपनीय <strong>Password</strong> दर्ज करें।</li>
+          <li>स्क्रीन पर प्रदर्शित 6-अंकीय <strong>Captcha Code</strong> भरें।</li>
+          <li><strong>Login</strong> बटन पर क्लिक करें। आपका डैशबोर्ड खुल जाएगा।</li>
+        </ol>
+
+        <h3 id="toc-recovery">4. पासवर्ड या एसएसओ आईडी भूल जाने पर क्या करें?</h3>
+        <p>
+          यदि आप अपनी आईडी या पासवर्ड भूल गए हैं, तो घबराने की आवश्यकता नहीं है:
+        </p>
+        <ul>
+          <li><strong>Forgot SSO ID:</strong> लॉगिन पेज पर <em>I Forgot My Digital Identity (SSO ID)</em> पर क्लिक करें। अपना जन आधार नंबर या रजिस्टर्ड मोबाइल नंबर दर्ज करें। तुरंत एसएमएस में आपकी आईडी भेज दी जाएगी।</li>
+          <li><strong>Forgot Password:</strong> <em>I Forgot My Password</em> पर क्लिक करें। अपनी SSO ID दर्ज करें और पंजीकृत मोबाइल नंबर पर ओटीपी मंगाकर 2 मिनट में नया पासवर्ड सेट करें।</li>
+          <li><strong>SMS द्वारा रिकवरी:</strong> अपने रजिस्टर्ड मोबाइल से <code>RJ SSO</code> लिखकर <strong>9223166166</strong> पर एसएमएस भेजें।</li>
+        </ul>
+
+        <h3 id="toc-links">5. महत्वपूर्ण आधिकारिक वेबसाइट लिंक्स</h3>
+        <div class="responsive-table">
+          <table>
+            <thead>
+              <tr>
+                <th>पोर्टल / सेवा का नाम</th>
+                <th>उद्देश्य</th>
+                <th>आधिकारिक लिंक</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Rajasthan SSO Portal</strong></td>
+                <td>मुख्य लॉगिन एवं रजिस्ट्रेशन</td>
+                <td><a href="https://sso.rajasthan.gov.in" target="_blank" rel="noopener">sso.rajasthan.gov.in ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>Recruitment Portal</strong></td>
+                <td>प्रतियोगी परीक्षा फॉर्म व प्रवेश पत्र</td>
+                <td><a href="https://recruitment2.rajasthan.gov.in" target="_blank" rel="noopener">recruitment2.rajasthan.gov.in ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>Jan Aadhaar Portal</strong></td>
+                <td>जन आधार ई-केवाईसी व संशोधन</td>
+                <td><a href="https://janaadhaar.rajasthan.gov.in" target="_blank" rel="noopener">janaadhaar.rajasthan.gov.in ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>e-Mitra Rajasthan</strong></td>
+                <td>नागरिक प्रमाण पत्र व बिल भुगतान</td>
+                <td><a href="https://emitra.rajasthan.gov.in" target="_blank" rel="noopener">emitra.rajasthan.gov.in ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>Apna Khata Jamabandi</strong></td>
+                <td>जमाबंदी एवं भू-नक्शा प्रति</td>
+                <td><a href="https://apnakhata.rajasthan.gov.in" target="_blank" rel="noopener">apnakhata.rajasthan.gov.in ↗</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="toc-helpline">6. आधिकारिक राजस्थान SSO हेल्पलाइन व संपर्क</h3>
+        <div class="callout callout-warning">
+          <div>📞</div>
+          <div>
+            <strong>ऑफिशियल हेल्पडेस्क संपर्क सूत्र:</strong><br />
+            • <strong>टोल-फ्री हेल्पलाइन:</strong> 0141-5123717 / 0141-5153222<br />
+            • <strong>ईमेल सहायता:</strong> helpdesk.sso@rajasthan.gov.in<br />
+            • <strong>समय:</strong> सोमवार से शुक्रवार (प्रातः 9:30 से सायं 6:00 बजे तक)
+          </div>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="guide-sidebar">
+        <!-- Quick Links Widget -->
+        <div class="sidebar-widget">
+          <div class="widget-title">⚡ त्वरित लिंक (Direct Links)</div>
+          <ul class="quick-links-list">
+            <li><a href="https://sso.rajasthan.gov.in/signin" target="_blank" rel="noopener"><span>SSO Login पोर्टल</span> <span>↗</span></a></li>
+            <li><a href="blog/how-to-create-sso-id.html"><span>नया SSO रजिस्ट्रेशन</span> <span>→</span></a></li>
+            <li><a href="blog/forgot-sso-id-password-reset.html"><span>पासवर्ड रीसेट गाइड</span> <span>→</span></a></li>
+            <li><a href="blog/sso-login-recruitment-portal.html"><span>भर्ती &amp; एडमिट कार्ड</span> <span>→</span></a></li>
+            <li><a href="blog/link-jan-aadhaar-sso.html"><span>जन आधार e-KYC लिंक</span> <span>→</span></a></li>
+            <li><a href="blog/rajasthan-scholarship-sso.html"><span>छात्रवृत्ति आवेदन 2026</span> <span>→</span></a></li>
+            <li><a href="blog/sso-id-merge-deactivate-delete.html"><span>दो SSO ID मर्ज प्रक्रिया</span> <span>→</span></a></li>
+            <li><a href="blog/emitra-sso-login-services.html"><span>ई-मित्र पोर्टल व रेट लिस्ट</span> <span>→</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Official Helpline Box -->
+        <div class="helpline-box" id="helpline">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">📞</div>
+          <h4 style="color:#fff; margin-bottom: 0.25rem;">आधिकारिक SSO हेल्पलाइन</h4>
+          <p style="font-size:0.8rem; color:#cbd5e1;">DoIT&amp;C, राजस्थान सरकार</p>
+          <div class="helpline-number">0141-5123717</div>
+          <p style="font-size:0.75rem; color:#94a3b8; margin-bottom: 1rem;">ईमेल: helpdesk.sso@rajasthan.gov.in</p>
+          <button class="btn btn-primary btn-sm" data-copy="01415123717">नंबर कॉपी करें 📋</button>
+        </div>
+
+        <!-- Latest Alerts Widget -->
+        <div class="sidebar-widget">
+          <div class="widget-title">📢 जरूरी अलर्ट्स 2026</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+            <p><strong>1. वन टाइम रजिस्ट्रेशन (OTR):</strong> आरपीएससी और अधीनस्थ बोर्ड भर्ती के लिए एक बार बायोमेट्रिक/जन आधार ओटीआर सत्यापन आवश्यक है।</p>
+            <p><strong>2. डुप्लीकेट आईडी:</strong> एक व्यक्ति द्वारा दो आईडी का उपयोग दंडनीय हो सकता है। प्रोफाइल मर्ज का उपयोग करें।</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Schema-Rich FAQ Section -->
+  
+    <section class="faq-section" id="faq">
+    <div class="container faq-container">
+      <div class="section-head">
+        <span class="section-tag">अक्सर पूछे जाने वाले सवाल</span>
+        <h2>राजस्थान SSO से संबंधित FAQ</h2>
+        <p>नागरिकों द्वारा सर्वाधिक पूछे जाने वाले प्रश्नों के प्रामाणिक उत्तर।</p>
+      </div>
+
+      <!-- FAQ 1 -->
+      <div class="faq-item active">
+        <button class="faq-question" aria-expanded="true">
+          <span>1. एसएसओ आईडी (SSO ID) क्या होती है और यह क्यों जरूरी है?</span>
+          <span class="faq-icon">▾</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            एसएसओ आईडी (Single Sign-On ID) राजस्थान सरकार का एक डिजिटल पहचान पत्र है। इसके माध्यम से राजस्थान का कोई भी नागरिक एक ही यूजरनेम और पासवर्ड से सरकार के 100 से अधिक विभागों, जैसे आरपीएससी (RPSC), कर्मचारी चयन बोर्ड (RSMSSB), ई-मित्र, छात्रवृत्ति, पुलिस वेरिफिकेशन, जन आधार और जमीन की जमाबंदी की सेवाओं का लाभ उठा सकता है।
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>2. क्या राजस्थान से बाहर के अभ्यर्थी भी SSO ID बना सकते हैं?</span>
+          <span class="faq-icon">▾</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            हाँ, अन्य राज्यों के अभ्यर्थी भी राजस्थान सरकार की प्रतियोगी परीक्षाओं (जैसे RPSC, CET आदि) में भाग लेने के लिए अपनी <strong>Google ID (Gmail)</strong> का उपयोग करके आसानी से नागरिक एसएसओ आईडी बना सकते हैं।
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>3. एसएसओ आईडी का पासवर्ड कैसे रीसेट करें?</span>
+          <span class="faq-icon">▾</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            पोर्टल کے लॉगिन पेज पर <strong>I Forgot My Password</strong> विकल्प पर क्लिक करें। अपनी SSO ID दर्ज करें और पंजीकृत मोबाइल नंबर, ईमेल या जन आधार पर प्राप्त OTP दर्ज करके तुरंत नया पासवर्ड बना सकते हैं।
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>4. एडमिट कार्ड डाउनलोड करते समय इनवैलिड क्रेडेंशियल आए तो क्या करें?</span>
+          <span class="faq-icon">▾</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            यदि प्रवेश पत्र डाउनलोड करते समय त्रुटि आती है, तो पहले सुनिश्चित करें कि आप सही एसएसओ आईडी से लॉगिन हैं जिससे आपने परीक्षा फॉर्म भरा था। 'Recruitment Portal' में जाकर 'My Applications' में अपना एप्लीकेशन नंबर जांचें और सीधे 'Get Admit Card' विकल्प से डाउनलोड करें।
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>5. अगर मोबाइल नंबर बदल गया है तो एसएसओ में कैसे अपडेट करें?</span>
+          <span class="faq-icon">▾</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            एसएसओ में लॉगिन करने के बाद ऊपरी दाएं कोने में अपनी प्रोफाइल आइकन पर क्लिक करें और 'Update Profile' चुनें। वहां नया मोबाइल नंबर दर्ज कर ओटीपी से सत्यापित करें। यदि जन आधार लिंक है, तो पहले जन आधार में मोबाइल नंबर अपडेट होना आवश्यक है।
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>6. एसएसओ आईडी बनाने के लिए क्या कोई शुल्क लगता है?</span>
+          <span class="faq-icon">▾</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            नहीं, राजस्थान सरकार द्वारा एसएसओ आईडी का पंजीकरण <strong>पूर्णतः निःशुल्क</strong> है। किसी भी ई-मित्र या साइबर कैफे को केवल फॉर्म भरने का नियत सेवा शुल्क ही दें।
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bar for High Conversion -->
+  <div class="mobile-sticky-bar">
+    <div class="mobile-sticky-bar-inner">
+      <a href="https://sso.rajasthan.gov.in" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+        🔐 SSO लॉगिन करें
+      </a>
+      <a href="blog/how-to-create-sso-id.html" class="btn btn-outline btn-sm">
+        📝 नया रजिस्ट्रेशन
+      </a>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  
+  </b:if>
+
+  <!-- Blogger Post / Page Section -->
+  <main class='guide-content-section' style='padding: 2rem 0;'>
+    <div class='container'>
+      <b:section id='main' name='Main Content' showaddelement='yes'>
+        <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2'>
+          <b:includable id='main' var='this'>
+            <b:if cond='data:view.isSingleItem'>
+              <!-- Single Post / Page View -->
+              <b:loop values='data:posts' var='post'>
+                <article class='guide-article' style='background: var(--bg-card); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-md); max-width: 900px; margin: 0 auto;'>
+                  <div class='article-header' style='margin-bottom: 2rem; border-bottom: 1px solid var(--border-light); padding-bottom: 1.5rem;'>
+                    <h1 class='article-title' style='font-size: 2rem; color: var(--text-main); margin-bottom: 1rem;'><data:post.title/></h1>
+                    <div class='article-meta' style='display: flex; gap: 1.25rem; color: var(--text-muted); font-size: 0.95rem; flex-wrap: wrap;'>
+                      <span>📅 <data:post.date/></span>
+                      <b:if cond='data:post.author'>
+                        <span>✍️ <data:post.author.name/></span>
+                      </b:if>
+                    </div>
+                  </div>
+                  <div class='article-body' style='line-height: 1.85; font-size: 1.05rem; color: var(--text-main);'>
+                    <data:post.body/>
+                  </div>
+                </article>
+              </b:loop>
+            <b:else/>
+              <!-- Archive / Search view if not on Homepage -->
+              <b:if cond='!data:view.isHomepage'>
+                <div style='max-width: 1000px; margin: 0 auto;'>
+                  <h2 class='section-title' style='margin-bottom: 2rem; text-align: left;'>एसएसओ गाइड्स एवं लेख</h2>
+                  <div class='guides-grid'>
+                    <b:loop values='data:posts' var='post'>
+                      <div class='guide-card'>
+                        <div class='guide-card-body'>
+                          <span class='guide-category'>SSO गाइड</span>
+                          <h3 class='guide-card-title'><a expr:href='data:post.url'><data:post.title/></a></h3>
+                          <p class='guide-card-desc'><data:post.snippet/></p>
+                          <div class='guide-card-footer'>
+                            <span>📅 <data:post.date/></span>
+                            <a class='read-more' expr:href='data:post.url'>पूरा पढ़ें →</a>
+                          </div>
+                        </div>
+                      </div>
+                    </b:loop>
+                  </div>
+                </div>
+              </b:if>
+            </b:if>
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-link">
+          <img src="assets/images/favicon.svg" alt="Rajasthan SSO Emblem" width="36" height="36" />
+          <div class="brand-title" style="color:#fff;">Rajasthan<span>SSO</span>.guide</div>
+        </div>
+        <p>
+          राजस्थान राज्य के नागरिकों एवं प्रतियोगी परीक्षा अभ्यर्थियों के लिए समर्पित एक स्वतंत्र शैक्षिक पोर्टल। यहाँ राजस्थान सिंगल साइन ऑन (SSO), ई-मित्र, जन आधार एवं भर्ती परीक्षाओं की सटीक व सरल जानकारी प्रदान की जाती है।
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>महत्वपूर्ण लेख</h4>
+        <ul class="footer-links">
+          <li><a href="blog/how-to-create-sso-id.html">एसएसओ आईडी कैसे बनाएं</a></li>
+          <li><a href="blog/sso-login-recruitment-portal.html">भर्ती &amp; एडमिट कार्ड</a></li>
+          <li><a href="blog/forgot-sso-id-password-reset.html">पासवर्ड रीसेट प्रक्रिया</a></li>
+          <li><a href="blog/link-jan-aadhaar-sso.html">जन आधार e-KYC लिंकिंग</a></li>
+          <li><a href="blog/rajasthan-scholarship-sso.html">उत्तर मैट्रिक छात्रवृत्ति</a></li>
+          <li><a href="blog/sso-id-merge-deactivate-delete.html">दो SSO ID मर्ज व सुधार</a></li>
+          <li><a href="blog/emitra-sso-login-services.html">ई-मित्र लॉगिन व रेट लिस्ट</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>उपयोगी लिंक्स</h4>
+        <ul class="footer-links">
+          <li><a href="/p/about-us.html">हमारे बारे में (About Us)</a></li>
+          <li><a href="/p/contact-us.html">संपर्क करें (Contact)</a></li>
+          <li><a href="/p/privacy-policy.html">गोपनीयता नीति (Privacy)</a></li>
+          <li><a href="/p/disclaimer.html">अस्वीकरण (Disclaimer)</a></li>
+          <li><a href="/sitemap.xml">साइटमैप (Sitemap)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>वैधानिक अस्वीकरण</h4>
+        <div class="disclaimer-box">
+          <strong>Disclaimer:</strong> यह वेबसाइट केवल नागरिकों की सुविधा व मार्गदर्शन हेतु बनाई गई एक निजी शैक्षिक गाइड है। यह राजस्थान सरकार या DoIT&amp;C का आधिकारिक पोर्टल नहीं है। आधिकारिक लेन-देन हेतु कृपया केवल <code>sso.rajasthan.gov.in</code> पर जाएं।
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div>© 2026 RajasthanSSO.guide - सर्वाधिकार सुरक्षित। (Educational Information Portal)</div>
+        <div>Made with ❤️ for citizens &amp; aspirants of Rajasthan</div>
+      </div>
+    </div>
+  </footer>
+
+  
+
+  <script type='text/javascript'>
+  //<![CDATA[
+/**
+ * Rajasthan SSO Guide - Interactive Features
+ * High-performance, vanilla JavaScript (no dependencies)
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  initMobileMenu();
+  initFaqAccordion();
+  initSsoValidator();
+  initServiceFilter();
+  initCopyButtons();
+});
+
+// 1. Theme Toggle (Dark / Light Mode)
+function initTheme() {
+  const themeToggle = document.getElementById('themeToggle');
+  if (!themeToggle) return;
+
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeIcon(savedTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+  });
+}
+
+function updateThemeIcon(theme) {
+  const themeToggle = document.getElementById('themeToggle');
+  if (!themeToggle) return;
+  themeToggle.innerHTML = theme === 'dark' 
+    ? '☀️ <span class="sr-only" style="display:none">Light</span>' 
+    : '🌙 <span class="sr-only" style="display:none">Dark</span>';
+}
+
+// 2. Mobile Menu Toggle
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (!toggleBtn || !mainNav) return;
+
+  toggleBtn.addEventListener('click', () => {
+    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', !isExpanded);
+    mainNav.classList.toggle('show');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mainNav.contains(e.target) && !toggleBtn.contains(e.target) && mainNav.classList.contains('show')) {
+      mainNav.classList.remove('show');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+// 3. FAQ Accordion
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    if (!questionBtn) return;
+
+    questionBtn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close other items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const otherBtn = otherItem.querySelector('.faq-question');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle current
+      if (isActive) {
+        item.classList.remove('active');
+        questionBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('active');
+        questionBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
+
+// 4. Interactive Rajasthan SSO ID Format Validator
+function initSsoValidator() {
+  const checkBtn = document.getElementById('checkSsoBtn');
+  const input = document.getElementById('ssoCheckInput');
+  const resultBox = document.getElementById('ssoCheckResult');
+  if (!checkBtn || !input || !resultBox) return;
+
+  const validate = () => {
+    const val = input.value.trim();
+    resultBox.classList.remove('valid', 'invalid');
+
+    if (!val) {
+      resultBox.innerHTML = '⚠️ कृपया अपनी एसएसओ आईडी दर्ज करें (Please enter an SSO ID to check).';
+      resultBox.classList.add('invalid', 'show');
+      return;
+    }
+
+    // SSO ID Rules:
+    // Alphanumeric with optional dot or underscore, length 4-30 chars, no spaces, no special characters
+    const validPattern = /^[a-zA-Z0-9._]{4,30}$/;
+    const hasSpace = /\s/.test(val);
+    const hasSpecial = /[^a-zA-Z0-9._]/.test(val);
+
+    if (hasSpace) {
+      resultBox.innerHTML = '❌ <strong>अमान्य फॉर्मेट (Invalid):</strong> एसएसओ आईडी में स्पेस (खाली जगह) नहीं हो सकती। (SSO ID cannot contain spaces).';
+      resultBox.classList.add('invalid', 'show');
+    } else if (hasSpecial) {
+      resultBox.innerHTML = '❌ <strong>अमान्य फॉर्मेट (Invalid):</strong> केवल अक्षर (A-Z), अंक (0-9), डॉट (.) और अंडरस्कोर (_) अनुमत हैं। @, #, $, & आदि मान्य नहीं हैं।';
+      resultBox.classList.add('invalid', 'show');
+    } else if (val.length < 4 || val.length > 30) {
+      resultBox.innerHTML = `❌ <strong>अमान्य लम्बाई (Invalid Length):</strong> एसएसओ आईडी 4 से 30 अक्षरों की होनी चाहिए। वर्तमान लम्बाई: ${val.length} अक्षर।`;
+      resultBox.classList.add('invalid', 'show');
+    } else {
+      // Valid syntax format
+      let typeHint = 'Citizen SSO ID (नागरिक)';
+      if (/^\d{10}$/.test(val)) {
+        typeHint = 'Jan Aadhaar Linked ID (जन आधार)';
+      } else if (/^[rR][jJ]/.test(val)) {
+        typeHint = 'Govt Employee / RajKaj ID (राजकीय कर्मचारी)';
+      }
+
+      resultBox.innerHTML = `✅ <strong>मान्य एसएसओ आईडी फॉर्मेट (Valid Format)!</strong><br>
+        ID: <code>${val}</code> | प्रकार: <strong>${typeHint}</strong><br>
+        <span style="font-size: 0.85em;">आप इस आईडी से <a href="https://sso.rajasthan.gov.in" target="_blank" rel="noopener" style="text-decoration:underline; font-weight:700;">आधिकारिक SSO पोर्टल</a> पर लॉगिन कर सकते हैं।</span>`;
+      resultBox.classList.add('valid', 'show');
+    }
+  };
+
+  checkBtn.addEventListener('click', validate);
+  input.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') validate();
+  });
+}
+
+// 5. Services Filter Bar
+function initServiceFilter() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const serviceCards = document.querySelectorAll('.service-card');
+  if (!filterBtns.length || !serviceCards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      serviceCards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+// 6. Copy Links or Helpline
+function initCopyButtons() {
+  const copyBtns = document.querySelectorAll('[data-copy]');
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const textToCopy = btn.getAttribute('data-copy');
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const origText = btn.innerHTML;
+        btn.innerHTML = 'Copied! ✓';
+        setTimeout(() => {
+          btn.innerHTML = origText;
+        }, 2000);
+      });
+    });
+  });
+}
+
+  //]]>
+  </script>
+</body>
+</html>

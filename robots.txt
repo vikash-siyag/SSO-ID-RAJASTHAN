@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gbgramg.in/sitemap.xml
+Sitemap: https://www.rajsso.in/sitemap.xml
